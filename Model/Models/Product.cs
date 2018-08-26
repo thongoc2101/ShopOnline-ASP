@@ -26,7 +26,9 @@ namespace Model.Models
         [MaxLength(256)]
         public string Image { get; set; }
 
-        public XElement MoreImages { get; set; }
+        // Kiêu dữ liệu XElement ko xác định được nên phải thêm column vào để xác định string đó là xml
+        [Column(TypeName = "xml")]
+        public string MoreImages { get; set; }
 
         public decimal Price { get; set; }
 
